@@ -1,0 +1,8 @@
+
+{
+  "presets": ["es2015"],
+  "plugins": [
+    "transform-decorators-legacy",
+    "babel-plugin-transform-class-properties"
+  ]
+}
