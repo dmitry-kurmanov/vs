@@ -15,6 +15,3 @@ export class Instance {
         })
     }
 }
-
-
-export { default as Designer } from './views/Designer.vue'

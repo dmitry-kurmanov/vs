@@ -6,34 +6,30 @@ import Vuex from 'vuex'
 const store = new Vuex.Store({
     state: {
         json: {
-            pages: [
-                {
-                    elements: [
-                        {
-                            type: "checkbox",
-                            name: "car",
-                            title: "What car are you driving?",
-                            isRequired: true,
-                            choices: [
-                                "None",
-                                "Ford",
-                                "Vauxhall",
-                                "Volkswagen",
-                                "Nissan",
-                                "Audi",
-                                "Mercedes-Benz",
-                                "BMW",
-                                "Peugeot",
-                                "Toyota",
-                                "Citroen"
-                            ],
-                            colCount: 4
-                        }
-                    ]
-                }
-            ]
+            pages: [{
+                elements: [{
+                    type: "checkbox",
+                    name: "car",
+                    title: "What car are you driving?",
+                    isRequired: true,
+                    choices: [
+                        "None",
+                        "Ford",
+                        "Vauxhall",
+                        "Volkswagen",
+                        "Nissan",
+                        "Audi",
+                        "Mercedes-Benz",
+                        "BMW",
+                        "Peugeot",
+                        "Toyota",
+                        "Citroen"
+                    ],
+                    colCount: 4
+                }]
+            }]
         },
-        currentTab: 'designer' // ['designer', 'json', 'test', 'embed']
+        currentTab: 'designer'
     },
     // getters: {
     //     jsonString: (state, getters) => {
@@ -41,11 +37,11 @@ const store = new Vuex.Store({
     //     }
     // },
     mutations: {
-        changeJSON (state, newJSON) {
+        changeJSON(state, newJSON) {
             state.json = newJSON
         },
-        
-        changeCurrentTab (state, newTab) {
+
+        changeCurrentTab(state, newTab) {
             state.currentTab = newTab
         }
     }

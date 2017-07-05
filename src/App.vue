@@ -2,25 +2,24 @@
     <div>
         <button data-value="designer" @click="changeTab"> Survey Designer </button>
 
-        <vse-designer-view v-show="$store.state.currentTab === 'designer'"/>
+        <designer-view v-show="$store.state.currentTab === 'designer'"/>
     </div>
 </template>
 
 <script>
     import Vue from 'vue'
-    import Component from 'vue-class-component'
+    import Designer from './views/Designer.vue'
 
-    @Component({
-        props: {
-            options: {
-                type: Object,
-                default: null
+    export default {
+
+        components: {
+            "designer-view": Designer
+        },
+
+        methods: {
+            changeTab (e) {
+                this.$store.commit('changeCurrentTab', e.target.dataset.value)
             }
-        }
-    })
-    export default class Editor extends Vue {
-        changeTab (e) {
-            this.$store.commit('changeCurrentTab', e.target.dataset.value)
         }
     }
 </script>
